@@ -1,0 +1,33 @@
+{
+  "name": "appfcamara",
+  "version": "1.0.0",
+  "description": "app que exibe dados administrativos de uma API",
+  "main": "server.js",
+  "scripts": {
+    "test": "server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solangealmn/appFCamara.git"
+  },
+  "keywords": [
+    "Javascript\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[CVanilla",
+    "Javascript",
+    "JQuery"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/solangealmn/appFCamara/issues"
+  },
+  "homepage": "https://github.com/solangealmn/appFCamara#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "handlebars": "^4.0.12",
+    "jquery": "^3.3.1",
+    "semantic-ui-css": "^2.4.1",
+    "vanilla-router": "^1.2.7"
+  }
+}
