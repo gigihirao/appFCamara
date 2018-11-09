@@ -174,7 +174,7 @@ span.my-tooltip {
     text-align: center;
     width: auto;
   }
-} 
+}
 
 input, button {
   font-family: 'Nunito', sans-serif;
@@ -187,6 +187,10 @@ input, button {
   padding: 20px;
   display: none;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 421b4c0be1a2052957c936266a3d72b637e234ca
 .main-div input {
   display: block;
   border: 1px solid #ccc;

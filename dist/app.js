@@ -1,14 +1,9 @@
-$( document ).ready(function() {
-  $(".btn-open").click(function() {
-	  $(".sidebar").toggleClass("open-sidebar close-sidebar");
-    $(this).toggleClass("btn-open btn-close fa-bars fa-times");
-  });
-
-  $(".btn-close").click(function() {
-    $(".sidebar").toggleClass("open-sidebar close-sidebar");
-    $(this).toggleClass("btn-open btn-close fa-bars fa-times");
-  });
-});
+$(document).ready( ()=> {
+  //Efeito da tela inicial
+  $('.lg-foodmap').delay('1000').fadeToggle('slow', 'linear');
+  $('.screen-main').delay('5000').fadeIn('slow');
+  $('.lg-foodmap').delay('3000').fadeOut('slow');
+}
 
 const loginFirebase = document.getElementById("btn-firelogin");
 const logoutFirebase = document.getElementById("btn-firelogout");
