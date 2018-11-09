@@ -22,7 +22,7 @@ const createArrayTotals = (data) => {
 const renderHTMLTotals = (data, newArray, title) => {
    $("main").html(`<div id="first-chart">
                    <h1> ${title} </h1>
-                   <div class="chart-container" style="display:flex">
+                 <div class="chart-container" style="display:flex">
                    <div class="chart-desc" style="align-self:center">
                        <p>Pedidos: ${data.monthSum.order}</p>
                        <p>Frete: ${data.monthSum.shipping}</p>
