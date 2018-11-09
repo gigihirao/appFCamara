@@ -10,7 +10,9 @@ page({ dispatch: false });
 
 
 function home() {
-  $('#main').html("gráficos totais")
+  doFetch("totals", createArrayTotals)
+  doFetch("brands", createHTMLBrands)
+  doFetch("products", createArrayProducts)
 }
 
 function clients() {

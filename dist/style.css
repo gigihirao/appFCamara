@@ -1,16 +1,185 @@
 body {
-  background: #fff;
-  padding: 0px;
   margin: 0px;
-  font-family: 'Nunito', sans-serif;
-  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.content {
+  display: flex;
+}
+
+.sidebar {
+  box-sizing: border-box;
+  background-color: #2b2b2b;
+  height: 100vh;
+  overflow: hidden;
+  transition-duration: .4s;
+}
+
+.profile {
+  margin-left: 70px;
+  color: #fff;
+  text-align: center;
+  width: 110px;
+  margin-top: 50px;
+}
+
+h1 {
+  color: #ffad44;
+  font-size: 18pt;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.profile-pic {
+  font-size: 50px;
+  border-radius: 360px;
+  border: 1px solid;
+  padding: 20px 24px;
+}
+
+.user-name {
+  margin-top: 10px;
+  font-size: 15pt;
+}
+
+.show {
+  background-color: transparent;
+  border: none;
+  margin: 20px auto 0px;
+  width: 50px;
+  display: flex;
+}
+
+.open-sidebar {
+  width: 250px;
+}
+
+.close-sidebar {
+  width: 70px
+}
+
+.fas-side {
+  color: #fff;
+  font-size: 15px;
+  padding: 8px 9px;
+  border: 1px solid;
+  border-radius: 360px;
+  width: 33px;
+  display: block;
+}
+
+.nav-items-with-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+}
+
+li.nav-items-li {
+  width: 250px;
+  list-style: none;
+}
+
+.btn-nav {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  text-align: left;
+  margin: 0px;
+  padding: 13px;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 9pt;
+  display: block;
+}
+
+.btn-nav:hover {
+  background-color: #ffad44;
+  color: #000;
+}
+
+.btn-nav:hover span.my-tooltip {
+  left: 15px;
+}
+
+.fas-nav {
+  margin-right: 12px;
+  width: 45px;
+  text-align: center;
+  font-size: 20px;
+}
+
+span.my-tooltip {
+  position: absolute;
+  margin-top: -12px;
+  margin-left: 54px;
+  background-color: #ffad44;
+  color: #000;
+  padding: 15px;
+  left: -30%;
+  transition-duration: .4s;
+  z-index: -1;
+}
+
+@media screen and (max-width: 580px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .close-sidebar {
+    width: 100%;
+    height: 70px;
+  }
+
+  .btn-open, .profile {
+    display: none;
+  }
+
+  .nav-items-with-buttons {
+    margin-top: 0px;
+    flex-direction: row;
+  }
+
+  .btn-nav {
+    color: transparent;
+    text-align: center;
+  }
+
+  .fas-nav {
+    color: #fff;
+    font-size: 22pt;
+    margin-top: 4px;
+    margin-right: 0px;
+  }
+
+  .my-tooltip {
+    display: none;
+  }
+
+  .btn-nav:hover {
+    color: transparent;
+    width: auto;
+  }
+  .btn-nav {
+    color: transparent;
+    text-align: center;
+    width: auto;
+  }
 }
 
 input, button {
   font-family: 'Nunito', sans-serif;
   font-weight: 700;
 }
-
 .main-div, .loggedin-div {
   width: 20%;
   margin: 0px auto;
@@ -18,7 +187,10 @@ input, button {
   padding: 20px;
   display: none;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 421b4c0be1a2052957c936266a3d72b637e234ca
 .main-div input {
   display: block;
   border: 1px solid #ccc;
@@ -32,11 +204,9 @@ input, button {
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
 }
-
 .main-div input:focus {
   border: 1px solid #777;
 }
-
 .main-div button, .loggedin-div button {
   background: #5d8ffc;
   color: #fff;
@@ -49,7 +219,6 @@ input, button {
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
 }
-
 .main-div button:hover, .loggedin-div button:hover {
   background: #fff;
   color: #5d8ffc;

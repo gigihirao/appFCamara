@@ -1,3 +1,10 @@
+$(document).ready( ()=> {
+  //Efeito da tela inicial
+  $('.lg-foodmap').delay('1000').fadeToggle('slow', 'linear');
+  $('.screen-main').delay('5000').fadeIn('slow');
+  $('.lg-foodmap').delay('3000').fadeOut('slow');
+}
+
 const login = document.getElementById("btn-firelogin");
 const logout = document.getElementById("btn-firelogout");
 const userBox = document.getElementById("user_div");
@@ -6,12 +13,7 @@ const userWelcome = document.getElementById("user_greeting");
 const userEmail = document.getElementById("email_field");
 const userPass = document.getElementById("password_field");
 
-$(document).ready( ()=> {
-  //Efeito da tela inicial
-  $('.lg-foodmap').delay('1000').fadeToggle('slow', 'linear');
-  $('.screen-main').delay('5000').fadeIn('slow');
-  $('.lg-foodmap').delay('3000').fadeOut('slow');
-}
+
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
