@@ -1,16 +1,13 @@
-require('dotenv').config(); // read .env files
 const express = require('express');
-
+const path = require('path');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
-// Set public folder as root
-app.use(express.static('public'));
+app.use("/dist", express.static(__dirname + '/dist'));
 
-// Allow front-end access to node_modules folder
-app.use('/scripts', express.static(`${__dirname}/node_modules/`));
-
-// Listen for HTTP requests on port 3000
-app.listen(port, () => {
-  console.log('listening on %d', port);
+app.get('/', function (request, response) {
+  response.sendFile(path.resolve(__dirname, 'index.html'));
 });
+
+app.listen(port);
+console.log("server started on port " + port);
