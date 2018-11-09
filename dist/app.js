@@ -10,15 +10,13 @@ $( document ).ready(function() {
   });
 });
 
-const login = document.getElementById("btn-firelogin");
-const logout = document.getElementById("btn-firelogout");
+const loginFirebase = document.getElementById("btn-firelogin");
+const logoutFirebase = document.getElementById("btn-firelogout");
 const userBox = document.getElementById("user_div");
 const loginBox = document.getElementById("login_div");
 const userWelcome = document.getElementById("user_greeting");
 const userEmail = document.getElementById("email_field");
 const userPass = document.getElementById("password_field");
-
-
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
@@ -45,7 +43,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
-login.addEventListener('click', login);
+loginFirebase.addEventListener('click', login);
 function login(){
 
   userEmail.value;
@@ -62,7 +60,7 @@ function login(){
   });
 
 }
-logout.addEventListener('click', logout);
+logoutFirebase.addEventListener('click', logout);
 function logout(){
   firebase.auth().signOut();
 }
