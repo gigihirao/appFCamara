@@ -1,4 +1,3 @@
-
 page('/', home);
 page('/clients', clients);
 page('/sellers', sellers);
@@ -10,17 +9,22 @@ page({ dispatch: false });
 
 
 function home() {
+  $('#main').html("")
   doFetch("totals", createArrayTotals)
   doFetch("brands", createHTMLBrands)
   doFetch("products", createArrayProducts)
 }
 
 function clients() {
-  $('#main').html("gráficos clientes")
+  $('#main').html("")
+  $('#main').html("clientes")
 }
 
 function sellers() {
-  $('#main').html("gráficos vendedores")
+  $('#main').html("")
+  doFetch("top_sellers", createGraphSellerRtng)
+  doFetch("seller", createAvgGraph)
+  doFetch("month", createBestPeriod)
 }
 
 function orders() {
@@ -30,3 +34,7 @@ function orders() {
 function products() {
   $('#main').html("gráficos produtos")
 }
+
+
+
+Collapse 

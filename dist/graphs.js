@@ -13,16 +13,16 @@ const createArrayTotals = (data) => {
    newArray = [
        ['Tipo', 'Valor'],
        ['Pedidos', dataOrder],
-       ['Pagos',   dataPaid],
+       ['Pagos',   dataPaid]
      ]
 
    renderHTMLTotals(data, newArray, "Pedidos e pagamentos")
 }
 
 const renderHTMLTotals = (data, newArray, title) => {
-   $("main").html(`<div id="first-chart">
+   $("main").html(`<div id="first-chart" class="item">
                    <h1> ${title} </h1>
-                 <div class="chart-container" style="display:flex">
+                   <div class="chart-container" style="display:flex">
                    <div class="chart-desc" style="align-self:center">
                        <p>Pedidos: ${data.monthSum.order}</p>
                        <p>Frete: ${data.monthSum.shipping}</p>
@@ -37,7 +37,7 @@ const renderHTMLTotals = (data, newArray, title) => {
 }
 
 const createHTMLBrands = (data) => {
-   $("main").append(`<div id="second-chart">
+   $("main").append(`<div id="second-chart" class="item">
    <h1> Marca mais vendida </h1>
    <div class="chart-desc"> ${data[0]["_id"]} </div>
    <div id="chart-totals"></div>
@@ -57,7 +57,7 @@ const createArrayProducts = (data) => {
  <h1> Produtos mais vendidos </h1>
  </div>`)
 
- graphBar(newArray);
+ graphBar(newArray,"#third-chart");
 }
 
 function graphPie(array) {
@@ -78,7 +78,7 @@ function graphPie(array) {
    }
 }
 
-function graphBar(array){
+function graphBar(array, div){
    google.charts.load('current', {'packages':['bar']});
      google.charts.setOnLoadCallback(drawChart);
 
@@ -93,7 +93,7 @@ function graphBar(array){
        };
 
        var newGraph = document.createElement('div');
-       document.querySelector("#third-chart").appendChild(newGraph);
+       document.querySelector(div).appendChild(newGraph);
 
        var chart = new google.charts.Bar(newGraph);
 
@@ -123,4 +123,40 @@ function graphBar(array){
 
        chart.draw(data, options);
      }
+ }
+
+ function createGraphSellerRtng(data){ 
+  newArray = [
+    ['Nome', 'Rating'],
+  ]
+ 
+  $.each(data, function(index, value) {
+    newArray.push([value["seller_name"], value["rating"]]);
+  })
+ 
+  $("main").append(`<div id="first-chart" class="item">
+  <h1> Sellers Rating </h1>
+  </div>`)
+ 
+  graphBar(newArray, "#first-chart");
+ }
+
+ function createAvgGraph(data){
+  newArray = [
+    ['Nome', 'Ticket Médio'],
+  ]
+ 
+  $.each(data, function(index, value) {
+    newArray.push([value["_id"], value["average_ticket"]]);
+  })
+ 
+  $("main").append(`<div id="second-chart" class="item">
+  <h1> Ticket Médio </h1>
+  </div>`)
+ 
+  graphBar(newArray, "#second-chart");
+ }
+
+ function createBestPeriod(){
+
  }

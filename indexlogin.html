@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>appFCamara</title>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
+    <script src="/dist/firebase-init.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/dist/style.css">
+  </head>
+  <body>
+    <div class="screen-splash">
+      <div class="banana text-center"><img class="banana" src="" width="260"></div>
+    </div>
+    <div class="screen-main">
+      <div id="login_div" class="main-div">
+        <h3>App FCamara</h3>
+        <input type="email" placeholder="Email" id="email_field" />
+        <input type="password" placeholder="Senha" id="password_field" />
+        <button id="btn-firelogin">Entrar</button>
+      </div>
+
+      <div id="user_div" class="loggedin-div">
+        <h3>Bem-vindo</h3>
+        <p id="user_greeting">Bem-vindo usuário!</p>
+        <button id="btn-firelogout">Sair</button>
+      </div>
+    </div>
+  <!-- JS Library Dependencies -->
+  <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js"></script>
+  <script src="/dist/routes.js"></script>
+  <script src="/dist/app.js"></script>
+  </body>
+</html>
