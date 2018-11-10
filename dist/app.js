@@ -8,7 +8,11 @@ $( document ).ready(function() {
     $(".sidebar").toggleClass("open-sidebar close-sidebar");
     $(this).toggleClass("btn-open btn-close fa-bars fa-times");
   });
+
+  home()
 });
+
+
 
 // const login = document.getElementById("btn-firelogin");
 // const logout = document.getElementById("btn-firelogout");

@@ -4,7 +4,6 @@ page('/sellers', sellers);
 page('/orders', orders);
 page('/products', products);
 
-//Erro no Pages.js reportado na issues (https://github.com/visionmedia/page.js/issues/522)
 page({ dispatch: false });
 
 
@@ -17,7 +16,7 @@ function home() {
 
 function clients() {
   $('#main').html("")
-  $('#main').html("clientes")
+  $('#main').html("<div class='item'> Conteúdo em atualização </div>")
 }
 
 function sellers() {
@@ -28,11 +27,11 @@ function sellers() {
 }
 
 function orders() {
-  $('#main').html("gráficos orders")
+  $('#main').html("<div class='item'> Conteúdo em atualização </div>")
 }
 
 function products() {
-  $('#main').html("gráficos produtos")
+  $('#main').html("<div class='item'> Conteúdo em atualização </div>")
 }
 
 

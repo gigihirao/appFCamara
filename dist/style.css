@@ -16,6 +16,7 @@ button:focus {
 
 .content {
   display: flex;
+  min-height: 100vh;
 }
 
 .sidebar {
@@ -142,6 +143,8 @@ main {
   width: 80%;
   margin: 50px auto;
   z-index: -5;
+  flex-wrap: wrap;
+  display: flex;
 }
 
 .item {
@@ -149,6 +152,9 @@ main {
   padding: 30px;
   box-sizing: border-box;
   margin: 20px;
+  flex-grow: 1;
+  box-shadow: 0px 0px 15px 0px #ccc;
+  border-radius: 8px;
 }
 
 @media screen and (max-width: 580px) {
@@ -179,9 +185,10 @@ main {
   .fas-nav {
     color: #fff;
     font-size: 22pt;
-    margin-top: 4px;
-    margin-right: 0px;
-  }
+    margin: auto;
+    width: 100%;
+    margin-top: 7px;
+}
 
   .my-tooltip {
     display: none;
@@ -196,6 +203,11 @@ main {
     text-align: center;
     width: auto;
   }
+
+  .item {
+    width: 100%;
+    overflow: hidden;
+}
 }
 
 input, button {
@@ -242,4 +254,9 @@ input, button {
   color: #5d8ffc;
   border: 1px solid #5d8ffc;
   cursor: pointer;
+}
+
+div#chart-totals {
+  margin: -12px 0;
+  background-color: transparent;
 }
